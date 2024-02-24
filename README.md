@@ -5,6 +5,7 @@
 **[Starter Code](#starter-code)**<br>
 **[Challenge Checklist](#challenge-checklist)**<br>
 **[Running the Program](#running-the-program)**<br>
+**[Notable Issues](#notable-issues)**<br>
 **[Data Analysis Answers](#data-analysis-answers)**<br>
 
 ## The Challenge
@@ -21,20 +22,24 @@ With the greater complexity of this challenge I will simplify my usual checklist
 
 ### Workflow
 
-- [ ] Prepare the data by scaling and setting the index.
-- [ ] Find the best value for K-Means (‘k’ number of clusters) of the scaled data
-- [ ] Cluster the scaled data into ‘k’ clusters
-- [ ] Use Principal Component Analysis (PCA) to find and reduce data to three components stored in a new DataFrame
-- [ ] Find the best value for K-Means of the PCA data
-- [ ] Cluster the PCA data into ‘k’ clusters
-- [ ] Weight the PCA data
-- [ ] Answer applicable data analysis questions in the notebook file
+- [x] Prepare the data by scaling and setting the index.
+- [x] Find the best value for K-Means (‘k’ number of clusters) of the scaled data
+- [x] Cluster the scaled data into ‘k’ clusters
+- [x] Use Principal Component Analysis (PCA) to find and reduce data to three components stored in a new DataFrame
+- [x] Find the best value for K-Means of the PCA data
+- [x] Cluster the PCA data into ‘k’ clusters
+- [x] Weight the PCA data
+- [x] Answer applicable data analysis questions in the notebook file
 
 ### Notable Grading Criteria
 
-- [ ] Utilize Python specific coding conventions and formatting
-- [ ] Utilize software source control Git and repository GitHub
-- [ ] Add additional commenting such that other developers can follow my logic beyond just the workflow outline (which I will do with a double hash [##])
+- [x] Utilize Python specific coding conventions and formatting
+- [x] Utilize software source control Git and repository GitHub
+- [x] Add additional commenting such that other developers can follow my logic beyond just the workflow outline (which I will do with a double hash [##] and docstrings)
+
+## Notable Issues
+
+As I happen to work on this code within three different Python environments, I noted that the KMeans algorithm returned different inertia values depending on which version of scikit-learn was installed. Because of this issue, I saved the cell outputs in the notebook so any review of the Elbow Curve plot and best ‘k’ analysis would make sense within the context I ran the notebook. Different versions of scikit-learn could perhaps be evaluated with a different best ‘k’.
 
 ## Running the Program
 
@@ -44,9 +49,9 @@ The program folder contains the completed notebook which can be run cell by cell
 Crypto_Clustering.ipynb
 ```
 
-The outputs for all cells in the notebook have been cleared. The notebook cells should be run from top to bottom. Outputs will closely resemble those displayed in the original starter code file.
+The outputs for all cells in the notebook have been saved specifically to retain the best ‘k’ analysis. The notebook cells could be run from top to bottom. Outputs will closely resemble those displayed in the original starter code file, but may vary slightly.
 
-I have a mind to add additional cells with math showing a method of automating the decision for the best K-Means number of clusters, based on the elbow method but without needing an expert to read a plot.
+I decided to add an additional function with logic that could be used to  automate the decision for the best K-Means number of clusters, based on the elbow method but without needing an expert to read a plot.
 
 ## Data Analysis Answers
 
